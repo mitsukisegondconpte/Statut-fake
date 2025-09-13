@@ -1,0 +1,142 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222.2, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --primary: hsl(142, 76%, 36%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --ring: hsl(142, 76%, 36%);
+  --radius: 0.5rem;
+  
+  /* WhatsApp specific colors - Official V2.25.22.80 */
+  --whatsapp-green: #25D366;
+  --whatsapp-dark: #075E54;
+  --whatsapp-bg: hsl(47, 22%, 90%);
+  --whatsapp-bubble: hsl(112, 60%, 87%);
+  --whatsapp-status: #25D366;
+}
+
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(210, 40%, 98%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --ring: hsl(212.7, 26.8%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* WhatsApp specific styles */
+.whatsapp-bg {
+  background: linear-gradient(to bottom, hsl(47, 22%, 90%) 0%, hsl(47, 22%, 84%) 100%);
+}
+
+.status-gradient-1 { 
+  background: linear-gradient(135deg, hsl(235, 84%, 74%) 0%, hsl(261, 50%, 67%) 100%); 
+}
+
+.status-gradient-2 { 
+  background: linear-gradient(135deg, hsl(318, 93%, 80%) 0%, hsl(355, 84%, 66%) 100%); 
+}
+
+.status-gradient-3 { 
+  background: linear-gradient(135deg, hsl(200, 98%, 66%) 0%, hsl(188, 100%, 50%) 100%); 
+}
+
+.status-gradient-4 { 
+  background: linear-gradient(135deg, hsl(142, 76%, 65%) 0%, hsl(170, 79%, 62%) 100%); 
+}
+
+.status-gradient-5 { 
+  background: linear-gradient(135deg, hsl(335, 90%, 70%) 0%, hsl(50, 100%, 63%) 100%); 
+}
+
+.status-gradient-6 { 
+  background: linear-gradient(135deg, hsl(174, 78%, 85%) 0%, hsl(329, 73%, 90%) 100%); 
+}
+
+.online-indicator {
+  width: 12px;
+  height: 12px;
+  background: hsl(142, 76%, 45%);
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+
+.status-ring {
+  background: conic-gradient(from 0deg, hsl(142, 76%, 45%) 0deg, hsl(142, 76%, 45%) 360deg);
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* WhatsApp color utilities */
+.bg-whatsapp-green {
+  background-color: var(--whatsapp-green);
+}
+
+.bg-whatsapp-dark {
+  background-color: var(--whatsapp-dark);
+}
+
+.text-whatsapp-green {
+  color: var(--whatsapp-green);
+}
+
+.border-whatsapp-green {
+  border-color: var(--whatsapp-green);
+}
+
+.hover\:bg-whatsapp-dark:hover {
+  background-color: var(--whatsapp-dark);
+}
